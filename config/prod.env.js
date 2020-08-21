@@ -5,21 +5,17 @@ const dotenv = require('dotenv')
 const fs = require('fs')
 
 // Read environment variables from "testenv". Override environment vars if they are already set.
-const TESTENV = path.resolve(__dirname, '..', '..', 'testenv')
-if (fs.existsSync(TESTENV)) {
-  const envConfig = dotenv.parse(fs.readFileSync(TESTENV))
+const OKTA_ENV = path.resolve(__dirname, '..', '.okta.env')
+if (fs.existsSync(OKTA_ENV)) {
+  const envConfig = dotenv.parse(fs.readFileSync(OKTA_ENV))
   Object.keys(envConfig).forEach((k) => {
     process.env[k] = envConfig[k]
   })
 }
-process.env.CLIENT_ID = process.env.CLIENT_ID || process.env.SPA_CLIENT_ID;
-process.env.OKTA_TESTING_DISABLEHTTPSCHECK = process.env.OKTA_TESTING_DISABLEHTTPSCHECK || false;
-
 // List of environment variables made available to the app
 [
   'ISSUER',
-  'CLIENT_ID',
-  'OKTA_TESTING_DISABLEHTTPSCHECK'
+  'CLIENT_ID'
 ].forEach((key) => {
   if (!process.env[key]) {
     throw new Error(`Environment variable ${key} must be set. See README.md`)
@@ -27,11 +23,10 @@ process.env.OKTA_TESTING_DISABLEHTTPSCHECK = process.env.OKTA_TESTING_DISABLEHTT
   process.env[key] = JSON.stringify(process.env[key]) // ensure variable is a string
 })
 
-const { CLIENT_ID, ISSUER, OKTA_TESTING_DISABLEHTTPSCHECK } = process.env
+const { CLIENT_ID, ISSUER } = process.env
 
 module.exports = {
   NODE_ENV: '"production"',
   CLIENT_ID,
-  ISSUER,
-  OKTA_TESTING_DISABLEHTTPSCHECK
+  ISSUER
 }

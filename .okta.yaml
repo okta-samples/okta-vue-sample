@@ -1,0 +1,5 @@
+oauthClient:
+  redirectUris:
+    - http://localhost:8080/callback
+  applicationType: spa
+appConfig: .okta.env
