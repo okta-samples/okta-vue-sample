@@ -3,3 +3,10 @@ oauthClient:
     - http://localhost:8080/callback
   applicationType: browser
 appConfig: .okta.env
+
+directions: |+2
+  Build this example using NPM:
+      npm install
+
+  And run with:
+      npm start
