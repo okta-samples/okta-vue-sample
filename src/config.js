@@ -4,7 +4,7 @@ export default {
   oidc: {
     clientId: CLIENT_ID,
     issuer: ISSUER,
-    redirectUri: window.location.origin + '/callback',
+    redirectUri: window.location.origin + '/login/callback',
     scopes: ['openid', 'profile', 'email']
   },
   resourceServer: {

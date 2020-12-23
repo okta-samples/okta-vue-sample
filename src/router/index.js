@@ -33,7 +33,7 @@ const router = new Router({
   routes: [
     {
       // handles OAuth callback
-      path: '/callback',
+      path: '/login/callback',
       component: LoginCallback
     },
     {
