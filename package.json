@@ -6,28 +6,26 @@
     "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test": "npm run lint && npm run test:custom-login --prefix ../",
-    "pretest": "npm run pretest --prefix ../"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@okta/okta-auth-js": "^4.5.0",
     "@okta/okta-vue": "^3.0.0",
-    "axios": "^0.20.0",
-    "core-js": "^3.6.5",
+    "axios": "^0.21.1",
+    "core-js": "^3.8.1",
     "semantic-ui-css": "^2.4.1",
     "text-encoding": "^0.7.0",
     "vue": "^2.6.12",
-    "vue-router": "^3.4.3"
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.6",
-    "@vue/cli-plugin-eslint": "~4.5.6",
-    "@vue/cli-service": "~4.5.6",
+    "@vue/cli-plugin-babel": "~4.5.9",
+    "@vue/cli-plugin-eslint": "~4.5.9",
+    "@vue/cli-service": "~4.5.9",
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "eslint": "^7.9.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^7.16.0",
+    "eslint-plugin-vue": "^7.3.0",
     "vue-template-compiler": "^2.6.12"
   },
   "engines": {

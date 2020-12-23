@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 
 // Read environment variables from "testenv". Override environment vars if they are already set.
-const OKTAENV = path.resolve(__dirname, '..', '.okta.env');
+const OKTAENV = path.resolve(__dirname, '.', '.okta.env');
 if (fs.existsSync(OKTAENV)) {
   const envConfig = dotenv.parse(fs.readFileSync(OKTAENV));
   Object.keys(envConfig).forEach((k) => {
