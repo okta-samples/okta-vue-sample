@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2018, Okta, Inc. and/or its affiliates. All rights reserved.
+ * Copyright (c) 2018-Present, Okta, Inc. and/or its affiliates. All rights reserved.
  * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
  *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
@@ -43,8 +43,8 @@
         the server will return a list of messages. If the token is not valid or the resource server is incorrectly configured,
         you will see a 401
         <code>Unauthorized response</code>.</p>
-      <p>This route is protected with the
-        <code>OktaAuthGuard</code> component, which will ensure that this page cannot be accessed until you have authenticated and have an access token
+      <p>This route is protected by Okta with the <code>requiresAuth: true</code> metadata in <code>router/index.js</code>.
+         This ensures that this page cannot be accessed until you have authenticated and have an access token
         in local storage.</p>
       <table class="ui table">
         <thead>

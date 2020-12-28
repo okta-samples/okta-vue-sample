@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2018, Okta, Inc. and/or its affiliates. All rights reserved.
+ * Copyright (c) 2018-Present, Okta, Inc. and/or its affiliates. All rights reserved.
  * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
  *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
@@ -26,7 +26,8 @@
       and is now stored in local storage.
     </p>
     <p>
-      This route is protected with the <code>Okta AuthRedirectGuard</code>, which will ensure that this page cannot be accessed until you have authenticated.
+      This route is protected by Okta with the <code>requiresAuth: true</code> metadata in <code>router/index.js</code>.
+      This ensures that this page cannot be accessed until you have authenticated.
     </p>
     <table class="ui table">
       <thead>
