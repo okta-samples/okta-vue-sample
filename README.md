@@ -4,30 +4,28 @@ This example shows you how to use the [Okta Vue Library][] to log in a user to a
 
 This example is built with [Vue CLI][].
 
-## Running This Example
+## Prerequisites
 
-To run this application, you first need to clone this repo and then enter into its directory:
+Before running this sample, you will need the following:
 
-```bash
-git clone https://github.com/okta-samples/okta-vue-sample.git
-cd okta-vue-sample
+* [The Okta CLI Tool](https://github.com/okta/okta-cli#installation)
+* An Okta Developer Account (create one using `okta register`, or configure an existing one with `okta login`)
+
+## Get the Code
+
+Grab and configure this project using `okta start vue`.
+
+Follow the instructions printed to the console.
+
+## Run the Example
+
+To run this application, install its dependencies:
+
 ```
-
-Then, install dependencies:
-
-```bash
 npm install
 ```
 
-Install the [Okta CLI][], and run:
-
-```bash
-okta start
-```
-
-This will create an OIDC app on Okta and replace the placeholders in `.okta.env` with your app's settings.
-
-Now, start your Vue app:
+With variables set, start your app:
 
 ```
 npm start
@@ -35,11 +33,11 @@ npm start
 
 Navigate to http://localhost:8080 in your browser.
 
-If you see a home page that prompts you to login, then things are working! Click the **Log in** button to go to the Okta hosted sign-in page.
+If you see a home page that prompts you to login, then things are working!  Clicking the **Log in** button will redirect you to the Okta hosted sign-in page.
 
-You can log in with the same account that you created when signing up for your developer org, or you can use a known username and password from your Okta Directory.
+You can sign in with the same account that you created when signing up for your Developer Org, or you can use a known username and password from your Okta Directory.
 
-> **Note:** If you are currently using your Developer Console, you already have a Single Sign-On (SSO) session for your Org. You will be automatically logged into your application as the same user that is using the Developer Console. You may want to use an incognito tab to test the flow from a blank slate.
+> **Note:** If you are currently using your Developer Console, you already have a Single Sign-On (SSO) session for your Org.  You will be automatically logged into your application as the same user that is using the Developer Console.  You may want to use an incognito tab to test the flow from a blank slate.
 
 ## Integrating The Resource Server
 
@@ -49,7 +47,7 @@ If you were able to successfully login in the previous section you can continue 
 * [Java/Spring MVC Resource Server Example](https://github.com/okta/samples-java-spring-mvc/tree/master/resource-server)
 * [ASP.NET Core Web API Resource Server Example](https://github.com/okta/samples-aspnetcore/tree/master/samples-aspnetcore-2x/resource-server)
 
-Once you have the resource server running (it will run on port 8000) you can visit the `/messages` page within the Vue application to see the authentication flow.  The Vue application will use its stored access token to authenticate itself with the resource server, you will see this as the `Authorization: Bearer <access_token>` header on the request if you inspect the network traffic in your browser.
+Once you have the resource server running (it will run on port 8000) you can visit the `/messages` page within the Vue application to see the authentication flow. The Vue application will use its stored access token to authenticate itself with the resource server, you will see this as the `Authorization: Bearer <access_token>` header on the request if you inspect the network traffic in your browser.
 
 [Okta CLI]: https://cli.okta.com
 [Vue CLI]: https://github.com/vuejs/vue-cli
