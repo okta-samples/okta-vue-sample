@@ -43,8 +43,7 @@
         the server will return a list of messages. If the token is not valid or the resource server is incorrectly configured,
         you will see a 401
         <code>Unauthorized response</code>.</p>
-      <p>This route is protected by Okta with the <code>requiresAuth: true</code> metadata in <code>router/index.js</code>.
-         This ensures that this page cannot be accessed until you have authenticated and have an access token
+      <p>This route is protected by Okta with the <code>requiresAuth: true</code> metadata in <code>router/index.js</code>. This ensures that this page cannot be accessed until you have authenticated and have an access token
         in local storage.</p>
       <table class="ui table">
         <thead>
@@ -82,7 +81,7 @@ export default {
   },
   async created () {
     try {
-      const accessToken = await this.$auth.getAccessToken()
+      const accessToken = this.$auth.getAccessToken()
       const response = await axios.get(
         sampleConfig.resourceServer.messagesUrl,
         {
