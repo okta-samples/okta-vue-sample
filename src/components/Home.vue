@@ -81,7 +81,7 @@ export default {
       ]
     }
   },
-  mounted () { this.setup() },
+  created () { this.setup() },
   methods: {
     async setup () {
       if (this.authState.isAuthenticated) {
