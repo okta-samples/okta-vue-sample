@@ -14,15 +14,15 @@
   <div class="messages">
     <h1 class="ui header">
       <i
-        aria-hidden="true"
-        class="mail outline icon"
+          aria-hidden="true"
+          class="mail outline icon"
       >
       </i>
       My Messages
     </h1>
     <div
-      v-if="failed"
-      class="ui error message"
+        v-if="failed"
+        class="ui error message"
     >
       <div class="content">
         <div class="header">Failed to fetch messages. Please verify the following:</div>
@@ -47,20 +47,20 @@
         in local storage.</p>
       <table class="ui table">
         <thead>
-          <tr>
-            <th>Date</th>
-            <th>Message</th>
-          </tr>
+        <tr>
+          <th>Date</th>
+          <th>Message</th>
+        </tr>
         </thead>
         <tbody>
-          <tr
+        <tr
             v-for="(message, index) in messages"
             :key="index"
             :id="'message-' + index"
-          >
-            <td>{{message.date}}</td>
-            <td>{{message.text}}</td>
-          </tr>
+        >
+          <td>{{message.date}}</td>
+          <td>{{message.text}}</td>
+        </tr>
         </tbody>
       </table>
     </div>
@@ -70,7 +70,6 @@
 <script>
 import axios from 'axios'
 import sampleConfig from '../config'
-
 export default {
   name: 'Messages',
   data () {
@@ -83,14 +82,13 @@ export default {
     try {
       const accessToken = this.$auth.getAccessToken()
       const response = await axios.get(
-        sampleConfig.resourceServer.messagesUrl,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`
+          sampleConfig.resourceServer.messagesUrl,
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`
+            }
           }
-        }
       )
-
       const messages = response.data.messages.map((message) => {
         let index = 1
         const date = new Date(message.date)
