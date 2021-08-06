@@ -14,8 +14,8 @@
   <div class="profile">
     <h1 class="ui header">
       <i
-        aria-hidden="true"
-        class="drivers license outline icon"
+          aria-hidden="true"
+          class="drivers license outline icon"
       >
       </i>
       My User Profile (ID Token Claims)
@@ -26,24 +26,23 @@
       and is now stored in local storage.
     </p>
     <p>
-      This route is protected by Okta with the <code>requiresAuth: true</code> metadata in <code>router/index.js</code>.
-      This ensures that this page cannot be accessed until you have authenticated.
+      This route is protected by Okta with the <code>requiresAuth: true</code> metadata in <code>router/index.js</code>. This ensures that this page cannot be accessed until you have authenticated.
     </p>
     <table class="ui table">
       <thead>
-        <tr>
-          <th>Claim</th>
-          <th>Value</th>
-        </tr>
+      <tr>
+        <th>Claim</th>
+        <th>Value</th>
+      </tr>
       </thead>
       <tbody>
-        <tr
+      <tr
           v-for="(claim, index) in claims"
           :key="index"
-        >
-          <td>{{claim.claim}}</td>
-          <td :id="'claim-' + claim.claim">{{claim.value}}</td>
-        </tr>
+      >
+        <td>{{claim.claim}}</td>
+        <td :id="'claim-' + claim.claim">{{claim.value}}</td>
+      </tr>
       </tbody>
     </table>
   </div>
