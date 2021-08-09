@@ -27,7 +27,7 @@
         </router-link>
         <a
             class="item"
-            v-if="!authState.isAuthenticated"
+            v-if="!authState?.isAuthenticated"
             v-on:click="login()"
         >
           Login
