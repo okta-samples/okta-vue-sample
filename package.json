@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@okta/okta-auth-js": "^5.8.0",
-    "@okta/okta-vue": "^5.0.1",
+    "@okta/okta-vue": "^5.0.2",
     "axios": "^0.24.0",
     "core-js": "^3.19.1",
     "semantic-ui-css": "^2.4.1",
     "text-encoding": "^0.7.0",
-    "vue": "^3.2.22",
+    "vue": "^3.2.24",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
