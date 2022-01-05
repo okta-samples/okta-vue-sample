@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@okta/okta-auth-js": "^5.8.0",
-    "@okta/okta-vue": "^5.0.1",
+    "@okta/okta-vue": "^5.0.2",
     "axios": "^0.24.0",
     "core-js": "^3.20.2",
     "semantic-ui-css": "^2.4.1",
