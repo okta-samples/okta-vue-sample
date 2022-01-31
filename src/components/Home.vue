@@ -14,7 +14,7 @@
   <div id="home">
     <h1 class="ui header">PKCE Flow w/ Okta Hosted Login Page</h1>
     <div v-if="!authState?.isAuthenticated">
-      <p>If you‘re viewing this page then you have successfully started this Vue application.</p>
+      <p>If you're viewing this page then you have successfully started this Vue application.</p>
       <p>This example shows you how to use the
         <a href="https://github.com/okta/okta-vue">Okta Vue Library</a> to add the
         <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE Flow</a> to your application.</p>

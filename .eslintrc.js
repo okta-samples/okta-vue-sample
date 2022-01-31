@@ -16,5 +16,16 @@ module.exports = {
     'vue/multi-word-component-names': ['error', {
       'ignores': ['home', 'Profile', 'Messages']
     }]
-  }
+  },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)'
+      ],
+      env: {
+        jest: true
+      }
+    }
+  ]
 }
