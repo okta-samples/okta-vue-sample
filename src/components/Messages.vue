@@ -102,6 +102,7 @@ export default {
       })
       this.messages = messages
     } catch (e) {
+      // eslint-disable-next-line
       console.error(e)
       this.failed = true
     }
