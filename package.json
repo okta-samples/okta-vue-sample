@@ -11,7 +11,7 @@
   "dependencies": {
     "@okta/okta-auth-js": "^5.10.0",
     "@okta/okta-vue": "^5.1.1",
-    "axios": "^0.24.0",
+    "axios": "^0.25.0",
     "core-js": "^3.20.3",
     "semantic-ui-css": "^2.4.1",
     "text-encoding": "^0.7.0",
