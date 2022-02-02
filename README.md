@@ -4,7 +4,7 @@ This example shows you how to use the [Okta Vue Library][] to log in a user to a
 
 This example is built with [Vue CLI][].
 
-This code sample demonstrates
+This code sample demonstrates:
 * Configuring Okta
 * Sign-in and sign-out
 * Protecting routes
