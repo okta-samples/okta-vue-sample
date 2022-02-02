@@ -4,6 +4,13 @@ This example shows you how to use the [Okta Vue Library][] to log in a user to a
 
 This example is built with [Vue CLI][].
 
+This code sample demonstrates:
+* Configuring Okta
+* Sign-in and sign-out
+* Protecting routes
+* Displaying user profile information from the ID Token
+* Adding a component that adds the Access Token to HTTP calls
+
 ## Prerequisites
 
 Before running this sample, you will need the following:
@@ -49,7 +56,19 @@ If you were able to successfully login in the previous section you can continue 
 
 Once you have the resource server running (it will run on port 8000) you can visit the `/messages` page within the Vue application to see the authentication flow. The Vue application will use its stored access token to authenticate itself with the resource server, you will see this as the `Authorization: Bearer <access_token>` header on the request if you inspect the network traffic in your browser.
 
+## Helpful resources
+
+* [Learn about Authentication, OAuth 2.0, and OpenID Connect][]
+* [Get started with Vue][]
+
+## Help
+
+Please visit our [Okta Developer Forums][].
+
 [Okta CLI]: https://cli.okta.com
 [Vue CLI]: https://github.com/vuejs/vue-cli
 [PKCE Flow]: https://developer.okta.com/docs/guides/implement-auth-code-pkce
 [Okta Vue Library]: https://github.com/okta/okta-vue
+[Learn about Authentication, OAuth 2.0, and OpenID Connect]: https://developer.okta.com/docs/concepts/
+[Get started with Vue]: https://v3.vuejs.org/guide/introduction.html
+[Okta Developer Forums]: https://devforum.okta.com
