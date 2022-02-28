@@ -14,7 +14,7 @@
     "@okta/okta-vue": "^5.2.0",
     "axios": "^0.26.0",
     "core-js": "^3.21.0",
-    "semantic-ui-css": "https://github.com/Semantic-Org/Semantic-UI-CSS.git",
+    "semantic-ui-css": "Semantic-Org/Semantic-UI-CSS",
     "text-encoding": "^0.7.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
