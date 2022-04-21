@@ -10,7 +10,7 @@
     "test": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@okta/okta-auth-js": "^6.4.0",
+    "@okta/okta-auth-js": "^6.2.0",
     "@okta/okta-vue": "^5.2.1",
     "axios": "^0.26.1",
     "core-js": "^3.21.1",
