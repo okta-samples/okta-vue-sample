@@ -13,7 +13,7 @@
     "@okta/okta-auth-js": "^6.2.0",
     "@okta/okta-vue": "^5.2.1",
     "axios": "^0.27.2",
-    "core-js": "^3.22.7",
+    "core-js": "^3.22.8",
     "semantic-ui-css": "Semantic-Org/Semantic-UI-CSS",
     "text-encoding": "^0.7.0",
     "vue": "^3.2.36",
@@ -31,7 +31,7 @@
     "@vue/vue3-jest": "^27.0.0",
     "babel-jest": "27.x",
     "eslint": "8.16.0",
-    "eslint-plugin-vue": "^9.0.1",
+    "eslint-plugin-vue": "^9.1.0",
     "vue-loader": "17.0.0"
   }
 }
