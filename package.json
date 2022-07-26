@@ -17,14 +17,14 @@
     "semantic-ui-css": "Semantic-Org/Semantic-UI-CSS",
     "text-encoding": "^0.7.0",
     "vue": "^3.2.37",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
-    "@vue/cli-plugin-babel": "~5.0.4",
+    "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.4",
     "@vue/cli-plugin-router": "~5.0.4",
-    "@vue/cli-plugin-unit-jest": "~5.0.4",
+    "@vue/cli-plugin-unit-jest": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/compiler-sfc": "^3.2.37",
     "@vue/test-utils": "^2.0.0",
