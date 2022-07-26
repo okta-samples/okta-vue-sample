@@ -27,10 +27,10 @@
     "@vue/cli-plugin-unit-jest": "~5.0.4",
     "@vue/cli-service": "~5.0.8",
     "@vue/compiler-sfc": "^3.2.37",
-    "@vue/test-utils": "^2.0.0",
+    "@vue/test-utils": "^2.0.2",
     "@vue/vue3-jest": "^27.0.0",
     "babel-jest": "27.x",
-    "eslint": "8.17.0",
+    "eslint": "8.20.0",
     "eslint-plugin-vue": "^9.3.0",
     "vue-loader": "17.0.0"
   }
