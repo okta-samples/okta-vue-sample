@@ -30,7 +30,7 @@
     "@vue/test-utils": "^2.1.0",
     "@vue/vue3-jest": "^27.0.0",
     "babel-jest": "27.x",
-    "eslint": "8.24.0",
+    "eslint": "8.25.0",
     "eslint-plugin-vue": "^9.5.1",
     "vue-loader": "17.0.0"
   }
