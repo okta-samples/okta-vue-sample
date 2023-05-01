@@ -32,6 +32,6 @@
     "babel-jest": "27.x",
     "eslint": "8.39.0",
     "eslint-plugin-vue": "^9.11.0",
-    "vue-loader": "17.0.1"
+    "vue-loader": "17.1.0"
   }
 }
