@@ -13,7 +13,7 @@
     "@okta/okta-auth-js": "^7.4.3",
     "@okta/okta-vue": "^5.7.0",
     "axios": "^1.6.0",
-    "core-js": "^3.33.1",
+    "core-js": "^3.33.2",
     "semantic-ui-css": "^2.5.0",
     "text-encoding": "^0.7.0",
     "vue": "^3.3.4",
