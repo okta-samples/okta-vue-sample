@@ -16,7 +16,7 @@
     "core-js": "^3.37.0",
     "semantic-ui-css": "^2.5.0",
     "text-encoding": "^0.7.0",
-    "vue": "^3.4.23",
+    "vue": "^3.4.26",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
