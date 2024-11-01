@@ -10,6 +10,44 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
+ <script setup>
+  import { ref, onMounted } from 'vue'
+  import axios from 'axios'
+  import sampleConfig from '../config'
+
+  import { useAuth } from '@okta/okta-vue';
+
+  const $auth = useAuth();
+  let messages = ref([]);
+  let failed = ref(false);
+
+  onMounted(async () => {  
+    try {
+      const accessToken = $auth.getAccessToken()
+      const response = await axios.get(sampleConfig.resourceServer.messagesUrl, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      })
+      const res = response.data.messages.map((message) => {
+         let index = 1
+         const date = new Date(message.date)
+         const day = date.toLocaleDateString()
+         const time = date.toLocaleTimeString()
+         return {
+           date: `${day} ${time}`,
+           text: message.text,
+           index: index++
+         }
+      })
+      messages.value = res
+    } catch (e) {
+      console.error(e)
+      failed.value = true
+    }
+  })
+</script>
+
 <template>
   <div class="messages">
     <h1 class="ui header">
@@ -66,46 +104,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import axios from 'axios'
-import sampleConfig from '../config'
-export default {
-  name: 'Messages',
-  data () {
-    return {
-      failed: false,
-      messages: []
-    }
-  },
-  async created () {
-    try {
-      const accessToken = this.$auth.getAccessToken()
-      const response = await axios.get(
-          sampleConfig.resourceServer.messagesUrl,
-          {
-            headers: {
-              Authorization: `Bearer ${accessToken}`
-            }
-          }
-      )
-      const messages = response.data.messages.map((message) => {
-        let index = 1
-        const date = new Date(message.date)
-        const day = date.toLocaleDateString()
-        const time = date.toLocaleTimeString()
-        return {
-          date: `${day} ${time}`,
-          text: message.text,
-          index: index++
-        }
-      })
-      this.messages = messages
-    } catch (e) {
-      // eslint-disable-next-line
-      console.error(e)
-      this.failed = true
-    }
-  }
-}
-</script>

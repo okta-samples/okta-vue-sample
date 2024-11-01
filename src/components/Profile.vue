@@ -10,6 +10,19 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
+<script setup>
+  import { ref, onMounted } from 'vue'
+  import { useAuth } from '@okta/okta-vue';
+
+  const $auth = useAuth();
+  let claims = ref([]);
+
+  onMounted(async () => {  
+    const idToken = await $auth.tokenManager.get('idToken')
+    claims.value = Object.entries(idToken.claims).map(entry => ({ claim: entry[0], value: entry[1] }))
+  })
+</script>
+
 <template>
   <div class="profile">
     <h1 class="ui header">
@@ -47,18 +60,3 @@
     </table>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'Profile',
-  data () {
-    return {
-      claims: []
-    }
-  },
-  async created () {
-    const idToken = await this.$auth.tokenManager.get('idToken')
-    this.claims = await Object.entries(idToken.claims).map(entry => ({ claim: entry[0], value: entry[1] }))
-  }
-}
-</script>

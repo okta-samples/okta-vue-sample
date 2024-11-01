@@ -1,5 +1,3 @@
-const { CLIENT_ID, ISSUER } = process.env
-
 export default {
   oidc: {
     clientId: CLIENT_ID,

@@ -12,16 +12,18 @@
 
 import { createRouter, createWebHistory } from 'vue-router'
 import { LoginCallback, navigationGuard } from '@okta/okta-vue'
-import HomeComponent from '@/components/Home'
-import ProfileComponent from '@/components/Profile'
-import MessagesComponent from '@/components/Messages'
+
+import HomeView from '../views/HomeView.vue'
+import ProfileView from '../views/ProfileView.vue'
+import MessagesView from '../views/MessagesView.vue'
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: HomeComponent
+      name: 'home',
+      component: HomeView
     },
     {
       path: '/login/callback',
@@ -29,14 +31,14 @@ const router = createRouter({
     },
     {
       path: '/profile',
-      component: ProfileComponent,
+      component: ProfileView,
       meta: {
         requiresAuth: true
       }
     },
     {
       path: '/messages',
-      component: MessagesComponent,
+      component: MessagesView,
       meta: {
         requiresAuth: true
       }

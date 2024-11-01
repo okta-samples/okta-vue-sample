@@ -10,6 +10,23 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import Home from './components/Home.vue'
+
+import { useAuth } from '@okta/okta-vue';
+
+const $auth = useAuth();
+
+const login = async () => {
+  await $auth.signInWithRedirect({ originalUri: '/' })
+}
+
+const logout = async () => {
+  await $auth.signOut()
+}
+</script>
+
 <template>
   <div id="app">
     <div class="ui inverted top fixed menu">
@@ -20,7 +37,7 @@
         >
           <img
               class="ui mini image"
-              src="./assets/logo.png"
+              src="./assets/logo.svg"
           >
           &nbsp;
           Okta-Vue Sample Project
@@ -71,16 +88,4 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'app',
-  methods: {
-    login () {
-      this.$auth.signInWithRedirect({ originalUri: '/' })
-    },
-    async logout () {
-      await this.$auth.signOut()
-    }
-  }
-}
-</script>
+
