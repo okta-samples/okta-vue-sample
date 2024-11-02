@@ -23,27 +23,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/login/callback',
-      component: LoginCallback
+      component: LoginCallback,
     },
     {
       path: '/profile',
       component: ProfileView,
       meta: {
-        requiresAuth: true
-      }
+        requiresAuth: true,
+      },
     },
     {
       path: '/messages',
       component: MessagesView,
       meta: {
-        requiresAuth: true
-      }
-    }
-  ]
+        requiresAuth: true,
+      },
+    },
+  ],
 })
 
 router.beforeEach(navigationGuard)

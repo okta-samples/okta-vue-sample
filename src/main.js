@@ -21,7 +21,4 @@ import sampleConfig from './config'
 
 const oktaAuth = new OktaAuth(sampleConfig.oidc)
 
-createApp(App)
-  .use(router)
-  .use(OktaVue, { oktaAuth })
-  .mount('#app')
+createApp(App).use(router).use(OktaVue, { oktaAuth }).mount('#app')
