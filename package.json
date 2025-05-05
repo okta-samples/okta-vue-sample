@@ -28,7 +28,7 @@
     "@vitest/eslint-plugin": "1.1.37",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/test-utils": "^2.4.6",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.5.0",
     "eslint": "^9.21.0",
     "eslint-plugin-vue": "^9.32.0",
     "jsdom": "^25.0.1",
