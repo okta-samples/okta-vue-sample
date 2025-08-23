@@ -65,7 +65,7 @@ cd okta-vue-sample
 Update your `.okta.env` file with the values from your application's configuration:
 
 ```text
-ISSUER=https://dev-133337.okta.com
+ISSUER=https://integrator-1337.okta.com
 CLIENT_ID=0oab8eb55Kb9jdMIr5d6
 ```
 
